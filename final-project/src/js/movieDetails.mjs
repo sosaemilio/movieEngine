@@ -26,8 +26,6 @@ function addToWatchlist() {
     console.log(movie);
 }
 
-
-
 function renderMovieDetails() {
     if (movie) {
         document.getElementById("movie-banner").src = movie.posterURLs.original;

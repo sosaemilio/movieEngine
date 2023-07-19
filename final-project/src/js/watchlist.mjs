@@ -20,14 +20,26 @@ function movieResultTemplate(movie) {
         <p>${movie.runtime} Mins</p>
         <p>IMBD ${movie.imdbRating}</p>
       </div>
+      <button id="removeFromWatchlist">
+        <p>Watched</p>
+      </button>
     </div>`;
   
     return newMovie;
 }
 
-export default async function movieList(movieTitle, selector) {
-  var movieList = await getMoviesByTitle(movieTitle);
-  //setLocalStorage("movie-results", movieList);
-  //var movieList = getLocalStorage("movie-results")
+function removeFromWatchlist($imbdId){
+    let movies = getLocalStorage("watchlist");
+    if (!Array.isArray(movies)) { 
+        movies = [movies];
+        movies.shift();
+    }
+    movies.push(movie);
+    setLocalStorage("watchlist", movies);
+    console.log(movie);
+}
+
+export default async function watchlist(selector) {
+  let movieList = getLocalStorage("watchlist");
   renderListWithTemplate(movieResultTemplate, document.querySelector(selector), movieList);
 }

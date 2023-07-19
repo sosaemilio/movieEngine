@@ -1,6 +1,4 @@
-import { getParam } from "./utils.mjs";
-import movieList from "./movieList.mjs";
+import watchlist from "./watchlist.mjs";
 
-let movieTitle = getParam("search");
 
-movieList(movieTitle, ".movie-watchlist");
+watchlist(".movie-watchlist");

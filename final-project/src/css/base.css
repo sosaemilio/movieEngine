@@ -22,18 +22,8 @@ a {
   text-decoration: none;
 }
 
-a,
-img,
-span,
-input,
-button,
-ion-icon {
-  display: block;
-}
-
 input {
   font: inherit;
-  width: 100%;
   border: none;
 }
 
@@ -243,4 +233,10 @@ body {
 
 section h2 {
   text-align: center;
+}
+
+#addToWatchlist, #removeFromWatchlist {
+  background-color: var(--gold);
+  width: 200px;
+  margin: auto;
 }
