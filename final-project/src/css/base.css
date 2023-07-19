@@ -235,7 +235,7 @@ section h2 {
   text-align: center;
 }
 
-#addToWatchlist, #removeFromWatchlist {
+#addToWatchlist, .removeFromWatchlist {
   background-color: var(--gold);
   width: 200px;
   margin: auto;

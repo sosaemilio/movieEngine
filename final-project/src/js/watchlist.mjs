@@ -20,26 +20,37 @@ function movieResultTemplate(movie) {
         <p>${movie.runtime} Mins</p>
         <p>IMBD ${movie.imdbRating}</p>
       </div>
-      <button id="removeFromWatchlist">
-        <p>Watched</p>
+      <button class="removeFromWatchlist" value="${movie.imdbId}">
+        Watched
       </button>
     </div>`;
   
     return newMovie;
 }
 
-function removeFromWatchlist($imbdId){
+function removeFromWatchlist(imdbId){
     let movies = getLocalStorage("watchlist");
-    if (!Array.isArray(movies)) { 
-        movies = [movies];
-        movies.shift();
-    }
-    movies.push(movie);
-    setLocalStorage("watchlist", movies);
-    console.log(movie);
+    let cleanedMovies = [];
+    movies.forEach(movie => {
+        console.log(movie);
+        if (movie.imdbId !== imdbId) {
+            cleanedMovies.push(movie);
+        } else {
+            console.log ("movie removed");
+        }
+    });
+    setLocalStorage("watchlist", cleanedMovies);
 }
 
 export default async function watchlist(selector) {
   let movieList = getLocalStorage("watchlist");
   renderListWithTemplate(movieResultTemplate, document.querySelector(selector), movieList);
+  const removeButtonList = document.querySelectorAll(".removeFromWatchlist");
+  removeButtonList.forEach(function(i) {
+    i.addEventListener("click", (e) => {
+        removeFromWatchlist(e.target.value);
+        location.reload();
+    });
+  })
+  
 }
