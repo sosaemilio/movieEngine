@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie</title>
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/large.css" />
+    <script src="/js/movie.js" type="module"></script>
+  </head>
+  <body>
+    <header class="nav-bar-header">
+      <div class="logo-box">
+        <a href="/index.html">
+          <img
+            id="logo-img"
+            alt="Movie Search Project Logo"
+            src="/images/logo-no-background.png"
+          />
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-bar">
+          <li class="nav-link">
+            <a href="/watchlist/index.html">
+              <img src="/images/heart.png" alt="wishlist icon" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="movie-page">
+      <div class="movie-banner">
+        <img src="" id="movie-banner">
+      </div>
+      <div class="movie-content">
+        <div class="title-box">
+          <h1></h1>
+          <p></p>
+        </div>
+        <div class="movie-classification-details">
+          <p class="duration"></p>
+          <p class="minium-age"></p>
+          <div class="genres"></div>
+          <p class="countries"></p>
+        </div>
+        <h2 class="tagline"></h2>
+        <p class="description"></p>
+        <ul class="casts"></ul>
+        <div class="imbd-rating">
+          <p class="rating"></p>
+          <a href="">
+            <img src="/images/imdb.png" alt="IMDB yellow logo" id="imbd-logo" />
+          </a>
+        </div>
+      </div>
+    </main>
+    <section>
+      <h2>Trailer</h2>
+      <div class="trailer-box">
+        <iframe
+          width="100%"
+          height="315"
+          src=""
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          id="trailer"
+        ></iframe>
+      </div>
+    </section>
+    <footer>
+<p>Site created by Emilio Sosa for WDD330</p>
+    </footer>
+  </body>
+</html>

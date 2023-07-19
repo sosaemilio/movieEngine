@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:wght@500&display=swap");
+:root {
+  /* CSS HEX */
+  --rich-black: #000814ff;
+  --oxford-blue: #001d3dff;
+  --yale-blue: #003566ff;
+  --mikado-yellow: #ffc300ff;
+  --gold: #ffd60aff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+img,
+span,
+input,
+button,
+ion-icon {
+  display: block;
+}
+
+input {
+  font: inherit;
+  width: 100%;
+  border: none;
+}
+
+select,
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.active {
+  overflow: hidden;
+}
+img {
+  width: 100%;
+}
+
+body {
+  font-family: "Wix Madefor Text", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--oxford-blue);
+  color: white;
+}
+
+main {
+  padding: 1rem;
+}
+
+footer,
+header {
+  background-color: var(--rich-black);
+  padding: 1rem;
+  color: white;
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: auto;
+}
+
+body {
+  background-image: url("/images/main-background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/*Nav Bar */
+.nav-bar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-bar-header img {
+  height: 3rem;
+}
+
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer */
+
+/*Homepage*/
+.homepage {
+  margin: 1rem;
+}
+
+.search-bar {
+  display: flex;
+}
+#search {
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  width: 70%;
+  border: 0;
+  font-family: "Wix Madefor Text", sans-serif;
+  flex-grow: 4;
+}
+
+#search-btn {
+  border-radius: 0.5rem;
+  border: 0;
+  background-color: var(--mikado-yellow);
+  color: white;
+  cursor: pointer;
+  font-family: "Wix Madefor Text", sans-serif;
+  flex-grow: 1;
+}
+
+/* Movies Details */
+
+.movie-page {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 1rem;
+  align-items: center;
+}
+
+.movie-page img {
+  width: 100%;
+}
+
+.title-box {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  column-gap: 0.7rem;
+}
+
+.movie-classification-details {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.movie-classification-details p {
+  background-color: var(--mikado-yellow);
+  border-radius: 1rem;
+  padding: 0.6rem;
+  margin: 0.3rem;
+}
+
+/* Movie Rating */
+
+#imbd-logo {
+  width: 50px;
+}
+
+.imbd-rating {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+
+.rating {
+  font-size: 1.5rem;
+}
+
+.casts {
+  display: flex;
+  flex-direction: column;
+}
+
+.casts p {
+  margin: 0;
+}
+
+.movie-content {
+  flex-grow: 3;
+}
+
+.movie-banner {
+  flex-grow: 1;
+}
+
+/* Watchlist */
+
+.movie-watchlist,
+.movie-search {
+  display: flex;
+  flex-direction: column;
+  background-image: url("/images/background-img.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-meta {
+  display: flex;
+  display: row;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.card-img {
+  margin: 0;
+  border-radius: 6px;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+}
+
+.card-img img {
+  object-fit: cover;
+}
+
+.search-result-title {
+  text-align: center;
+}
+
+section h2 {
+  text-align: center;
+}
